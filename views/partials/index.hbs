@@ -1,1 +1,29 @@
-<h3>Express View Engine</h3>
+{{!-- ssection --}}
+
+
+<section class="section-my-4">
+    <div class="container text-center">
+        <div class="title py-5">
+            <h1>Node Image Uploader</h1>
+            <p class="subtitle">Upload Images To The <strong>Server</strong></p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <form action="/uploadmultiple" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="file" name="images" class="form-control" id="formFile" multiple>
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" class="btn btn-warning" value="Upload Images">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{> card}}
+    </div>
+</section>
+
+
+{{!-- ssection --}}
