@@ -1,10 +1,12 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path');
 const router = require('./server/router/router');
 const port = process.env.PORT || 3000;
 const hbs = require('express-handlebars');
-
+const connect = require('./server/database/database');
+connect();
 
 
 app.use(express.json());

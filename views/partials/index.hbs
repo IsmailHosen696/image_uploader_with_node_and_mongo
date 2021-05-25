@@ -21,7 +21,23 @@
                 </form>
             </div>
         </div>
-        {{> card}}
+        <section class="mt-5">
+            <div class="row">
+                {{#each images}}
+                {{#each this}}
+                {{#if imageBase64 }}
+                {{!-- bootstrap cads --}}
+                <div class="col-3">
+                    <div class="card shadow" style="width: 18rem;">
+                        <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" class="img-fluid"
+                            alt="...">
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+                {{/each}}
+            </div>
+        </section>
     </div>
 </section>
 
